@@ -253,7 +253,7 @@ public class App {
 
         // w3resource questions
         // 1
-        int[] numArr = {3, 4, 5, 1, 2, 8, 9, 6, 7};
+        // int[] numArr = {3, 4, 5, 1, 2, 8, 9, 6, 7};
         // String[] strArr = {"apple", "orange", "mango", "banana"};
         // Arrays.sort(numArr);
         // Arrays.sort(strArr);
@@ -262,6 +262,7 @@ public class App {
 
 
         // // 2
+        // int[] numArr = {3, 4, 5, 1, 2, 8, 9, 6, 7};
         // int total = 0;
         // for (int i : numArr) {
         //     total += i;
@@ -279,6 +280,7 @@ public class App {
 
 
         // // 4
+        // int[] numArr = {3, 4, 5, 1, 2, 8, 9, 6, 7};
         // int total = 0;
         // for (int i : numArr) {
         //     total += i;
@@ -288,6 +290,7 @@ public class App {
 
 
         // // 7
+        // int[] numArr = {3, 4, 5, 1, 2, 8, 9, 6, 7};
         // int searchVal = 5;
         // boolean valExists = false;
         // for (int i = 0; i < numArr.length; i++) {
@@ -299,6 +302,7 @@ public class App {
 
 
         // // 6
+        // int[] numArr = {3, 4, 5, 1, 2, 8, 9, 6, 7};
         // for (int i = 0; i < numArr.length; i++) {
         //     if (numArr[i] == searchVal) {
         //         System.out.println("index: " + i);
@@ -308,16 +312,14 @@ public class App {
 
         // // 7
         // ArrayList<Integer> numList = new ArrayList<Integer>();
-        // numList.add(5);
-        // numList.add(4);
-        // numList.add(3);
-        // numList.add(2);
-        // numList.add(1);
+        // Collections.addAll(numList, 5, 4, 3, 2, 1);
 
         // numList.remove(2);
 
 
         // // 8
+        // ArrayList<Integer> numList = new ArrayList<Integer>();
+        // Collections.addAll(numList, 5, 4, 3, 2, 1);
         // ArrayList<Integer> copyArr = new ArrayList<Integer>();
         // for (int i : numList) {
         //     copyArr.add(i);
@@ -326,10 +328,13 @@ public class App {
 
 
         // // 9
-        // copyArr.add(2, 3);
+        // ArrayList<Integer> numList = new ArrayList<Integer>();
+        // Collections.addAll(numList, 5, 4, 3, 2, 1);
+        // numList.add(2, 3);
 
 
         // // 10
+        // int[] numArr = {3, 4, 5, 1, 2, 8, 9, 6, 7};
         // int min = numArr[0];
         // int max = numArr[0];
         // for (int i : numArr) {
@@ -343,15 +348,17 @@ public class App {
 
 
         // // 11
-        // Collections.reverse(copyArr);
-        // System.out.println(copyArr.toString());
+        // ArrayList<Integer> numList = new ArrayList<Integer>();
+        // Collections.addAll(numList, 5, 4, 3, 2, 1);
+        // Collections.reverse(numList);
+        // System.out.println(numList.toString());
 
 
         // // 12
         // int[] arr = {1, 2, 3, 4, 5, 1, 2, 3};
         // ArrayList<Integer> dupes = new ArrayList<Integer>();
         // for (int i = 0; i < arr.length; i++) {
-        //     for (int j = i+1; j < arr.length - 1; j++) {
+        //     for (int j = i + 1; j < arr.length - 1; j++) {
         //         if (arr[i] == arr[j]) {
         //             dupes.add(arr[i]);
         //         }
@@ -359,110 +366,296 @@ public class App {
         // }
 
 
-        // 13
-        String[] strArr = {"apple", "orange", "mango", "banana", "apple", "orange"};
-        ArrayList<String> dupes = new ArrayList<String>();
-        for (int i = 0; i < strArr.length; i++) {
-            for (int j = i+1; j < strArr.length - 1; j++) {
-                if (strArr[i] == strArr[j]) {
-                    dupes.add(strArr[i]);
-                }
-            }
-        }
+        // // 13
+        // String[] strArr = {"apple", "orange", "mango", "banana", "apple", "orange"};
+        // ArrayList<String> dupes = new ArrayList<String>();
+        // for (int i = 0; i < strArr.length; i++) {
+        //     for (int j = i + 1; j < strArr.length - 1; j++) {
+        //         if (strArr[i] == strArr[j]) {
+        //             dupes.add(strArr[i]);
+        //         }
+        //     }
+        // }
 
 
-        // 14
-        String[] strArr1 = {"apple", "orange", "mango", "banana"};
-        String[] strArr2 = {"banana", "apple", "orange"};
-        ArrayList<String> common = new ArrayList<String>();
-        for (int i = 0; i < strArr1.length; i++) {
-            for (int j = 0; j < strArr2.length - 1; j++) {
-                if (strArr1[i] == strArr2[j]) {
-                    common.add(strArr1[i]);
-                }
-            }
-        }
+        // // 14
+        // String[] strArr1 = {"apple", "orange", "mango", "banana"};
+        // String[] strArr2 = {"banana", "apple", "orange"};
+        // ArrayList<String> common = new ArrayList<String>();
+        // for (int i = 0; i < strArr1.length; i++) {
+        //     for (int j = 0; j < strArr2.length - 1; j++) {
+        //         if (strArr1[i] == strArr2[j]) {
+        //             common.add(strArr1[i]);
+        //         }
+        //     }
+        // }
 
 
         // 15 
-        int[] arr1 = {1, 2, 3, 4, 5};
-        int[] arr2 = {3, 4, 5, 6, 7};
-        ArrayList<Integer> common = new ArrayList<Integer>();
-        for (int i : arr1) {
-            for (int j : arr2) {
-                if (i == j) {
-                    common.add(i);
-                }
-            }
-        }
+        // int[] arr1 = {1, 2, 3, 4, 5};
+        // int[] arr2 = {3, 4, 5, 6, 7};
+        // ArrayList<Integer> common = new ArrayList<Integer>();
+        // for (int i : arr1) {
+        //     for (int j : arr2) {
+        //         if (i == j) {
+        //             common.add(i);
+        //         }
+        //     }
+        // }
 
 
-        // 16
-        int[] arr = {1, 2, 3, 4, 5, 1, 2, 3};
-        ArrayList<Integer> newArr = new ArrayList<Integer>();
-        for (int i : arr) {
-            if (!newArr.contains(i)) {
-                newArr.add(i);
-            }
-        }
+        // // 16
+        // int[] arr = {1, 2, 3, 4, 5, 1, 2, 3};
+        // ArrayList<Integer> newArr = new ArrayList<Integer>();
+        // for (int i : arr) {
+        //     if (!newArr.contains(i)) {
+        //         newArr.add(i);
+        //     }
+        // }
 
 
-        // 17
-        int max = arr[0];
-        int secondMax = arr[0];
-        for (int i : arr) {
-            if (i > max) {
-                secondMax = max;
-                max = i;
-            }
-            else if (i > secondMax) {
-                secondMax = i;
-            }
-        }
+        // // 17
+        // int[] arr = {1, 2, 3, 4, 5, 1, 2, 3};
+        // int max = arr[0];
+        // int secondMax = arr[0];
+        // for (int i : arr) {
+        //     if (i > max) {
+        //         secondMax = max;
+        //         max = i;
+        //     }
+        //     else if (i > secondMax) {
+        //         secondMax = i;
+        //     }
+        // }
 
 
-        // 18 second smallest
-        int min = arr[0];
-        int secondMin = arr[0];
-        for (int i : arr) {
-            if (i < min) {
-                secondMin = min;
-                min = i;
-            }
-            else if (i < secondMin) {
-                secondMin = i;
-            }
-        }
+        // // 18 second smallest
+        // int[] arr = {1, 2, 3, 4, 5, 1, 2, 3};
+        // int min = arr[0];
+        // int secondMin = arr[0];
+        // for (int i : arr) {
+        //     if (i < min) {
+        //         secondMin = min;
+        //         min = i;
+        //     }
+        //     else if (i < secondMin) {
+        //         secondMin = i;
+        //     }
+        // }
 
 
-        // 19
-        int[][] matrix1 = {
-            {1, 2, 3},
-            {4, 5, 6}
-        };
-        int[][] matrix2 = {
-            {1, 2, 3},
-            {4, 5, 6}
-        };
-        int[][] matrix3 = new int[matrix1.length][matrix1[0].length];
-        for (int i = 0; i < matrix1.length; i++) {
-            for (int j = 0; j < matrix1[0].length - 1; j++) {
-                matrix3[i][j] = matrix1[i][j] + matrix2[i][j];
-            }
-        }
+        // // 19
+        // int[][] matrix1 = {
+        //     {1, 2, 3},
+        //     {4, 5, 6}
+        // };
+        // int[][] matrix2 = {
+        //     {1, 2, 3},
+        //     {4, 5, 6}
+        // };
+        // int[][] matrix3 = new int[matrix1.length][matrix1[0].length];
+        // for (int i = 0; i < matrix1.length; i++) {
+        //     for (int j = 0; j < matrix1[0].length - 1; j++) {
+        //         matrix3[i][j] = matrix1[i][j] + matrix2[i][j];
+        //     }
+        // }
 
 
-        // 20
-        ArrayList<Integer> newArr = new ArrayList<Integer>();
-        for (int i : arr) {
-            newArr.add(i);
-        }
+        // // 20
+        // int[] arr = {1, 2, 3, 4, 5, 1, 2, 3};
+        // ArrayList<Integer> newArr = new ArrayList<Integer>();
+        // for (int i : arr) {
+        //     newArr.add(i);
+        // }
 
 
-        // 21
-        int[] newArr = new int[numList.size()];
-        for (int i = 0; i < numList.size(); i++) {
-            newArr[i] = numList.get(i);
-        }
+        // // 21 
+        // ArrayList<Integer> numList = new ArrayList<Integer>();
+        // Collections.addAll(numList, 5, 4, 3, 2, 1);
+        // int[] newArr = new int[numList.size()];
+        // for (int i = 0; i < numList.size(); i++) {
+        //     newArr[i] = numList.get(i);
+        // }
+
+
+        // // 22
+        // int[] arr1 = {1, 2, 3, 4, 5};
+        // int[] arr2 = {3, 4, 5, 6, 7};
+        // int endNum = 10;
+        // ArrayList<ArrayList<Integer>> sumNums = new ArrayList<ArrayList<Integer>>();
+        // for (int i = 0; i < arr1.length; i++) {
+        //     for (int j = 0; j < arr2.length; i++) {
+        //         if (arr1[i] + arr2[j] == endNum) {
+        //             ArrayList<Integer> ans = new ArrayList<>();
+        //             ans.add(arr1[i]);
+        //             ans.add(arr2[j]);
+        //         }
+        //     }
+        // }
+        
+
+        // // 23
+        // int[] arr1 = {1, 2, 3, 4, 5};
+        // int[] arr2 = {3, 4, 5, 6, 7};
+        // System.out.println(Arrays.equals(arr1, arr2));
+
+
+        // // 24
+        // int[] arr = {5, 6, 8, 9, 10};
+        // int start = 5;
+        // for (int i = 0; i < arr.length; i++) {
+        //     if (arr[i] != start + i) {
+        //         System.out.println(start + i);
+        //     }
+        // }
+
+
+        // // 25
+        // int[] arr1 = {5, 10, 15, 20, 25, 30};
+        // int[] arr2 = {10, 20, 30, 40, 50, 60, 70};
+        // int[] arr3 = {20, 40, 60, 80};
+        // ArrayList<Integer> nums = new ArrayList<Integer>();
+        // int cnt1 = 0, cnt2 = 0, cnt3 = 0;
+
+        // while (cnt1 < arr1.length && cnt2 < arr2.length && cnt3 < arr3.length) {
+        //     if (arr1[cnt1] == arr2[cnt2] && arr2[cnt2] == arr3[cnt3]) {
+        //         nums.add(arr1[cnt1]);
+        //         cnt1++;
+        //         cnt2++;
+        //         cnt3++;
+        //     }
+        //     else if (arr1[cnt1] < arr2[cnt2]) {
+        //         cnt1++;
+        //     }
+        //     else if (arr2[cnt2] < arr3[cnt3]) {
+        //         cnt2++;
+        //     }
+        //     else {
+        //         cnt3++;
+        //     }
+        // }
+
+        // System.out.println(nums.toString());
+
+
+        // // 26
+        // int[] arr = {4, 6, 2, 0, 3, 0, 1, 5, 0, 9};
+        // int count = 0;
+        // int len = arr.length;
+        // for (int i = 0; i < len;) {
+        //     System.out.println("work");
+        //     if (arr[i] == 0) i++;
+        //     else {
+        //         int num = arr[count];
+        //         arr[count] = arr[i];
+        //         arr[i] = num;
+        //         count++;
+        //         i++;
+        //     }
+        // }
+        // while (count < len) {
+        //     arr[count] = 0;
+        //     count++;
+        // }
+        // System.out.println(Arrays.toString(arr));
+
+
+        // // 27
+        // int[] arr = {4, 6, 2, 0, 3, 0, 1, 5, 0, 9};
+        // int even = 0, odd = 0;
+        // for (int i : arr) {
+        //     if (i % 2 == 0) even++;
+        //     else odd++;
+        // }
+        // System.out.println("even: " + even + ", odd: " + odd);
+
+
+        // // 28
+        // int[] arr = {4, 6, 2, 0, 3, 0, 1, 5, 0, 9};
+        // int min = arr[0], max = arr[0];
+        // for (int i : arr) {
+        //     if (i < min) min = i;
+        //     else if (i > max) max = i;
+        // }
+        // System.out.println(max - min);
+
+
+        // // 29
+        // int[] arr = {4, 6, 2, 0, 3, 0, 1, 5, 0, 9};
+        // int min = arr[0], max = arr[0], total = 0;
+        // for (int i : arr) {
+        //     if (i < min) min = i;
+        //     else if (i > max) max = i;
+        //     total += i;
+        // }
+        // System.out.println((total - min - max) / (arr.length - 2));
+
+
+        // // 30
+        // int[] arr = {4, 6, 2, 0, 3, 0, 1, 5, 0, 9};
+        // boolean contains = true;
+        // for (int i : arr) {
+        //     if (i == 0 || i == -1) {
+        //         contains = false;
+        //         break;
+        //     }
+        // }
+        // System.out.println(contains);
+
+
+        // // 31
+        // int[] arr = {40, 60, 20, 10, 30, 10, 50, 10, 90};
+        // int total = 0;
+        // for (int i : arr) {
+        //     if (i == 10) total += i;
+        // }
+        // System.out.println(total == 30);
+
+
+        // // 32
+        // ArrayList<Integer> arr = new ArrayList<Integer>();
+        // Collections.addAll(arr, 25, 27, 83, 65, 26, 52, 34, 77, 99);
+        // if (arr.contains(65) && arr.contains(75)) {
+        //     System.out.println("contains 65 and 77");
+        // }
+        // else {
+        //     System.out.println("does not contain 65 and 77");
+        // }
+
+
+        // 33
+        ArrayList<Integer> arr1 = new ArrayList<Integer>();
+        Collections.addAll(arr1, 20, 20, 30, 40, 50, 50, 50);
+        Set<Integer> set1 = new HashSet<Integer>(arr1);
+        System.out.println(set1.size());
+
+
+        // 34 TODO: this
+        int[] arr = {49, 1, 3, 200, 2, 4, 70, 5};
+        Set<Integer> hash = new HashSet<Integer>(Arrays.asList(arr));
+
+
+        // 35
+        
+        
+
+        // 36
+
+
+
+        // 37
+
+
+
+        // 38
+        
+
+
+        // 39
+
+
+
+        // 40
+
     } 
 }

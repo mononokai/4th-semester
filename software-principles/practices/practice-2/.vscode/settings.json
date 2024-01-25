@@ -2,5 +2,18 @@
   "java.project.sourcePaths": ["src"],
   "java.project.outputPath": "bin",
   "java.project.referencedLibraries": ["lib/**/*.jar"],
-  "cSpell.words": ["hackerrank"]
+  "cSpell.words": [
+    "aceitos",
+    "Aluno",
+    "aprovado",
+    "Eixo",
+    "exame",
+    "hackerrank",
+    "Intervalo",
+    "Origem",
+    "perim",
+    "Perimetro",
+    "reprovado",
+    "Valores"
+  ]
 }
