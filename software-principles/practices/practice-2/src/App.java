@@ -623,39 +623,136 @@ public class App {
         // }
 
 
-        // 33
-        ArrayList<Integer> arr1 = new ArrayList<Integer>();
-        Collections.addAll(arr1, 20, 20, 30, 40, 50, 50, 50);
-        Set<Integer> set1 = new HashSet<Integer>(arr1);
-        System.out.println(set1.size());
+        // // 33
+        // ArrayList<Integer> arr1 = new ArrayList<Integer>();
+        // Collections.addAll(arr1, 20, 20, 30, 40, 50, 50, 50);
+        // Set<Integer> set1 = new HashSet<Integer>(arr1);
+        // System.out.println(set1.size());
 
 
-        // 34 TODO: this
-        int[] arr = {49, 1, 3, 200, 2, 4, 70, 5};
-        Set<Integer> hash = new HashSet<Integer>(Arrays.asList(arr));
+        // // 34
+        // int[] arr = {49, 1, 3, 200, 2, 4, 70, 5};
+        // Set<Integer> set = new HashSet<Integer>();
+        // for (int i : arr) {
+        //     set.add(i);
+        // }
+        // int max = 0;
+        // for (int i : arr) {
+        //     if (!set.contains(i - 1)) {
+        //         int j = i;
+        //         while (set.contains(j)) {
+        //             j++;
+        //         }
+        //         max = Math.max(max, j - i);
+        //     }
+        // }
+        // System.out.println(max);
 
 
-        // 35
+        // // 35
+        // int[] arr = {1, 2, 4, 5, 6};
+        // int target = 6;
+        // for (int i = 0; i < arr.length; i++) {
+        //     for (int j = i + 1; j < arr.length; j++) {
+        //         if (arr[i] + arr[j] == target) {
+        //             System.out.println(arr[i] + " + " + arr[j] + " = " + target);
+        //         }
+        //     }
+        // }
         
-        
 
-        // 36
-
-
-
-        // 37
-
-
-
-        // 38
-        
-
-
-        // 39
+        // // 36
+        // int[] arr = {1, -2, 0, 5, -1, -4};
+        // int target = 2;
+        // for (int i = 0; i < arr.length; i++) {
+        //     for (int j = i + 1; j < arr.length; j++) {
+        //         for (int k = j + 1; k < arr.length; k++) {
+        //             if (arr[i] + arr[j] + arr[k] == target) {
+        //                 System.out.println(arr[i] + " + " + arr[j] + " + " + arr[k] + " = " + target);
+        //             }
+        //         }
+        //     }
+        // }
 
 
+        // // 37
+        // int[][] matrix = {
+        //     {1, 2},
+        //     {3, 4}
+        // };
+        // int n = matrix.length;
+        // int[][] newArr = new int[n][n];
+        // for (int i = 0; i < n; i++) {
+        //     for (int j = 0; j <= i; j++) {
+        //         newArr[i][j] = matrix[j][i - j];
+        //     }
+        // }
+        // for (int i = 1; i < n; i++) {
+        //     for (int j = 0; j < n - i; j++) {
+        //         newArr[i + j][n - 1 - j] = matrix[i + j][n - 1 - j];
+        //     }
+        // }
+        // for (int i = 0; i < n; i++) {
+        //     System.out.println(Arrays.toString(newArr[i]));
+        // }
 
-        // 40
 
+        // // 38
+        // int[] arr = {3, 3, 4, 2, 4, 4, 2, 4, 4};
+        // int majority = arr[0];
+        // int count = 1;
+        // for (int i = 1; i < arr.length; i++) {
+        //     if (arr[i] == majority) {
+        //         count++;
+        //     }
+        //     else {
+        //         count--;
+        //     }
+        //     if (count == 0) {
+        //         majority = arr[i];
+        //         count = 1;
+        //     }
+        // }
+        // count = 0;
+        // for (int i : arr) {
+        //     if (i == majority) {
+        //         count++;
+        //     }
+        // }
+        // if (count > arr.length / 2) {
+        //     System.out.println(majority);
+        // }
+        // else {
+        //     System.out.println("no majority element");
+        // }
+
+
+        // // 39
+        // int[] arr = {16, 17, 4, 3, 5, 2};
+        // int max = arr[arr.length - 1];
+        // System.out.println(max);
+        // for (int i = arr.length - 2; i >= 0; i--) {
+        //     if (arr[i] > max) {
+        //         max = arr[i];
+        //         System.out.println(max);
+        //     }
+        // }
+
+
+        // // 40
+        // int[] arr = {1, 60, -10, 70, -80, 85};
+        // int min = Integer.MAX_VALUE;
+        // int num1 = 0, num2 = 0;
+        // for (int i = 0; i < arr.length; i++) {
+        //     for (int j = i + 1; j < arr.length; j++) {
+        //         int sum = arr[i] + arr[j];
+        //         if (Math.abs(sum) < min) {
+        //             min = Math.abs(sum);
+        //             num1 = arr[i];
+        //             num2 = arr[j];
+        //         }
+        //     }
+        // }
+        // System.out.println(num1 + " and " + num2);
     } 
 }
