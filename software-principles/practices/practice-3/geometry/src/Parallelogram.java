@@ -2,15 +2,19 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Parallelogram {
-    protected ArrayList<Point2D> points;
+    protected ArrayList<Point> points;
+    protected ArrayList<Line> sides;
     
-    public Parallelogram(Point2D p1, Point2D p2, Point2D p3, Point2D p4) {
-        if (p1.isEqualTo(p2) || p1.isEqualTo(p3) || p1.isEqualTo(p4) || p2.isEqualTo(p3) || p2.isEqualTo(p4) || p3.isEqualTo(p4)) {
-            throw new IllegalArgumentException("Points cannot match");
-        }
+    public Parallelogram(Point p1, Point p2, Point p3, Point p4) {
+        Line side1 = new Line(p1, p2);
+        Line side2 = new Line(p2, p3);
+        Line side3 = new Line(p3, p4);
+        Line side4 = new Line(p4, p1);
 
         points = new ArrayList<>();
         Collections.addAll(points, p1, p2, p3, p4);
+        sides = new ArrayList<>();
+        Collections.addAll(sides, side1, side2, side3, side4);
     }
 
     public Line largestDiagonal() {
@@ -21,11 +25,6 @@ public class Parallelogram {
     }
 
     public double perimeter() {
-        double line1 = new Line(points.get(0), points.get(1)).length();
-        double line2 = new Line(points.get(1), points.get(2)).length();
-        double line3 = new Line(points.get(2), points.get(3)).length();
-        double line4 = new Line(points.get(3), points.get(4)).length();
-
-        return line1 + line2 + line3 + line4;
+        return sides.get(0).length() + sides.get(1).length() + sides.get(2).length() + sides.get(3).length();
     }
 }
