@@ -1,1 +1,15 @@
-- dynamic method dispatch - 
+- dynamic method dispatch - a method call is resolved at runtime and allows a subclass to override a method of a superclass
+- type casting - converting an object from one datatype to another
+  - casting is done by putting a type in parenthesis in front of a value
+  - example: Dog dog = (Dog) animal;
+- upcasting - casting an object to its superclass type, allowing you to treat a subclass object as an instance of its superclass
+  - example: Animal animal = new Dog(); // this is implicit
+  - always works, never any errors
+  - will not have access to the subclass methods or attributes
+  - will still allow the use of overridden methods of the subclass
+  - allows the use of a subclass as a parameter in a method that requires its superclass
+- downcasting - casting an object to its subclass type
+  - example: Dog myDog = (Dog) animal; // this is building off of the above example
+  - this can be risky because it will not work if the object being passed in isn't actually of the type that the superclass is being downcast to
+    - this is called a Class Cast exception
+  - downcasting is done explicitly, you must cast the type onto the value

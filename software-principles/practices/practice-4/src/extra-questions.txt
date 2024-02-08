@@ -1,0 +1,5 @@
+7a. upcasting is casting an object to its superclass type and is implicit, downcasting is casting an object to its subclass type and is explicit
+7b. upcasting is implicitly typecasted and downcasting is explicitly typecasted
+8. Polymorphism is the ability to use objects in multiple different ways based on the way or context they're used. I have examples in the App file.
+9. Exceptions in Java are pretty much the same as any other language. They are just ways to catch things going the way they shouldn't. You can find an example in the Calc.java file.
+10. There's an example of this in the App.java file caused by downcasting.
