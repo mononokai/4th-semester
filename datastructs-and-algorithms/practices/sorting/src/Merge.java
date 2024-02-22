@@ -1,20 +1,29 @@
 import java.util.Arrays;
 
 public class Merge {
-    static int[] sort(int[] arr) {
-        int mid = arr.length / 2;
+    public static void sort(int[] arr) {
+        int len = arr.length;
+        int mid = len / 2;
 
-        int[] chunk = Arrays.copyOfRange(arr, 0, mid);
+        // guard clause
+        if (len < 2) return;
 
-        int[] res = merge(sort(chunk), sort(arr));
+        int[] left = new int[mid];
+        int[] right = new int[len - mid];
 
-        return arr;
+        for (int i = 0; i < mid; i++) {
+            left[i] = arr[i];
+        }
+
+        for (int i = mid; i < len; i++) {
+            
+        }
+
+        return;
     }
 
     private int[] merge(int[] left, int[] right) {
         int[] arr = new int[left.length + right.length];
-
-        
 
         return arr;
     }

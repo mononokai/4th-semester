@@ -16,7 +16,7 @@
 - iteratively selects unvisited vertices with the shortest distance from the source
   - it then visits the neighbors of that vertex and updates their distances if a shorter path is found
 - this keeps going until the destination vertex is reached or all reachable vertices have been reached
-- psuedo code:
+- pseudo code:
   - distance from start vertex to start vertex = 0
   - distance to all other vertices from start = infinity
   - WHILE until all vertices visited:
