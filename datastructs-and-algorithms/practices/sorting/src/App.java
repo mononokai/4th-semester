@@ -1,14 +1,30 @@
+import java.text.DecimalFormat;
 import java.util.Arrays;
+import java.util.Random;
+import java.text.NumberFormat;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        int[] arr = { 5, 1, 4, 2, 8 };
+        // int[] arr = { 5, 1, 4, 2, 8 };
+        int[] arr2 = new int[100000];
+        Random rng = new Random();
+        for (int i = 0; i < arr2.length; i++) {
+            arr2[i] = rng.nextInt(100000);
+        }
 
-        // int[] bubbleSorted = Bubble.sort(arr);
+        // long start = System.currentTimeMillis();
+        // int[] bubbleSorted = Bubble.sort(arr2);
         // System.out.println(Arrays.toString(bubbleSorted));
+        // long end = System.currentTimeMillis();
+        // NumberFormat formatter = new DecimalFormat("#0.00000");
+        // System.out.println("Took " + formatter.format((end - start) / 1000d) + " seconds");
 
-        int[] quickSorted = Quick.sort(arr, 0, arr.length - 1);
+        long start = System.currentTimeMillis();
+        int[] quickSorted = Quick.sort(arr2);
         System.out.println(Arrays.toString(quickSorted));
+        long end = System.currentTimeMillis();
+        NumberFormat formatter = new DecimalFormat("#0.00000");
+        System.out.println("Took " + formatter.format((end - start) / 1000d) + " seconds");
 
         // Graph graph = new Graph(new int[5][5]);
         // graph.edge(0, 2, 4);
