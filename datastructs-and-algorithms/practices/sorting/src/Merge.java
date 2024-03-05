@@ -1,12 +1,10 @@
-import java.util.Arrays;
-
 public class Merge {
-    public static void sort(int[] arr) {
+    public static int[] sort(int[] arr) {
         int len = arr.length;
         int mid = len / 2;
 
         // guard clause
-        if (len < 2) return;
+        if (len < 2) return arr;
 
         int[] left = new int[mid];
         int[] right = new int[len - mid];
@@ -16,15 +14,46 @@ public class Merge {
         }
 
         for (int i = mid; i < len; i++) {
-            
+            right[i - mid] = arr[i];
         }
 
-        return;
-    }
+        sort(left);
+        sort(right);
 
-    private int[] merge(int[] left, int[] right) {
-        int[] arr = new int[left.length + right.length];
+        merge(arr, left, right);
 
         return arr;
+    }
+
+    private static void merge(int[] arr, int[] left, int[] right) {
+        int leftLen = left.length;
+        int rightLen = right.length;
+        int i = 0, j = 0, k = 0;
+
+        while (i < leftLen && j < rightLen) {
+            if (left[i] <= right[j]) {
+                arr[k] = left[i];
+                i++;
+            }
+            else {
+                arr[k] = right[j];
+                j++;
+            }
+
+            k++;
+
+        }
+
+        while (i < leftLen) {
+            arr[k] = left[i];
+            i++;
+            k++;
+        }
+
+        while (j < rightLen) {
+            arr[k] = right[j];
+            j++;
+            k++;
+        }
     }
 }
