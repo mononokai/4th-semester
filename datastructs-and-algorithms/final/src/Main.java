@@ -1,9 +1,12 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) throws Exception {
         System.out.println("Student Management System");
 
         // create new student management system
         StudentManagementSystem students = new StudentManagementSystem();
+        Scanner sc = new Scanner(System.in);
 
         // add students
         students.add(3, "Bill", 20, 90);
@@ -13,39 +16,85 @@ public class Main {
         students.add(5, "Blake", 20, 92);
         students.add(4, "Bella", 21, 89);
 
-        // display students
-        System.out.println("All students:");
-        students.display();
+        // start system
+        loop: while (true) {
+            System.out.println("Please select an option:");
+            System.out.println("1. Display students");
+            System.out.println("2. Add student");
+            System.out.println("3. Delete student");
+            System.out.println("4. Search for a student by ID");
+            System.out.println("5. Search for a student by name");
+            System.out.println("6. See students sorted by ID");
+            System.out.println("7. See students sorted by name");
+            System.out.println("8. See students sorted by age");
+            System.out.println("9. See students sorted by grade");
+            System.out.println("10. Exit");
 
-        // delete student
-        students.delete(3);
+            // get user input
+            int option = sc.nextInt();
 
-        // display students
-        System.out.println("Students after deleting Bill:");
-        students.display();
+            switch (option) {
+                case 1:
+                    students.display();
+                    break;
+                case 2:
+                    System.out.println("Enter student ID:");
+                    int ID = sc.nextInt();
+                    System.out.println("Enter student name:");
+                    String name = sc.next();
+                    System.out.println("Enter student age:");
+                    int age = sc.nextInt();
+                    System.out.println("Enter student grade:");
+                    int grade = sc.nextInt();
+                    students.add(ID, name, age, grade);
+                    break;
+                case 3:
+                    System.out.println("Enter student ID to delete:");
+                    ID = sc.nextInt();
+                    students.delete(ID);
+                    break;
+                case 4:
+                    System.out.println("Enter student ID to search:");
+                    ID = sc.nextInt();
+                    int index = students.searchByID(ID);
+                    if (index != -1) {
+                        System.out.println("Student found: " + students.students[index].name);
+                    } else {
+                        System.out.println("Student not found");
+                    }
+                    break;
+                case 5:
+                    System.out.println("Enter student name to search:");
+                    name = sc.next();
+                    index = students.searchByName(name);
+                    if (index != -1) {
+                        System.out.println("Student found: ID " + students.students[index].ID);
+                    } else {
+                        System.out.println("Student not found");
+                    }
+                    break;
+                case 6:
+                    SortAlgorithms.byID(students.students);
+                    break;
+                case 7:
+                    SortAlgorithms.byName(students.students);
+                    break;
+                case 8:
+                    SortAlgorithms.byAge(students.students);
+                    break;
+                case 9:
+                    SortAlgorithms.byGrade(students.students);
+                    break;
+                case 10:
+                    System.out.println("Goodbye");
+                    sc.close();
+                    break loop;
+                default:
+                    System.out.println("Invalid option");
+                    break;
+            }
 
-        // search for student by ID
-        int index = students.searchByID(2);
-        System.out.println("Student name found by ID: " + students.students[index].name);
-
-        // search for student by name
-        index = students.searchByName("Blake");
-        System.out.println("Student ID found by name: " + students.students[index].ID);
-
-        // sort students by ID
-        System.out.println("Students sorted by ID:");
-        SortAlgorithms.byID(students.students);
-
-        // sort students by name
-        System.out.println("Students sorted by name:");
-        SortAlgorithms.byName(students.students);
-
-        // sort students by age
-        System.out.println("Students sorted by age:");
-        SortAlgorithms.byAge(students.students);
-
-        // sort students by grade
-        System.out.println("Students sorted by grade:");
-        SortAlgorithms.byGrade(students.students);
+            System.out.println();
+        }
     }
 }

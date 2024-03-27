@@ -33,7 +33,7 @@ public class StudentManagementSystem {
     public int searchByName(String name) {
         // linear search for student name
         for (int i = 0; i < students.length; i++) {
-            if (students[i].name == name)
+            if (students[i].name.equals(name))
                 return i;
         }
 
