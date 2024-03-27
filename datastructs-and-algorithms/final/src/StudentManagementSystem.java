@@ -7,6 +7,14 @@ public class StudentManagementSystem {
     public void add(int ID, String name, int age, int grade) {
         Student student = new Student(ID, name, age, grade);
         
+        // check if students array is empty
+        if (students == null) {
+            // create new array with one element
+            students = new Student[1];
+            students[0] = student;
+            return;
+        }
+
         // copy and extend students array to add new student
         students = Arrays.copyOf(students, students.length + 1);
         students[students.length - 1] = student;
