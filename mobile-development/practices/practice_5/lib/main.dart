@@ -152,7 +152,7 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
+              SizedBox(
                 width: 200,
                 child: Column(
                   children: [
